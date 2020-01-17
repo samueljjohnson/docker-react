@@ -1,0 +1,9 @@
+#Base
+FROM node:alpine
+#Additional config
+WORKDIR '/app'
+COPY package.json .
+RUN npm install
+COPY . .
+#Command to run
+CMD ["npm","run","start"]
